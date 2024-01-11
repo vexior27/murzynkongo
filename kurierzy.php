@@ -30,9 +30,9 @@
             <li><i class="fa-solid fa-house"></i><a href="dashboard.php">Strona główna</a></li>
             <li><i class="fa-solid fa-users"></i><a href="oddzialy.php">Dane oddzialu</a></li>
             <li class="active"><i class="fa-solid fa-truck-fast"></i>Kurierzy</li>
-            <li><i class="fa-solid fa-user"></i>Nadawcy</li>
-            <li><i class="fa-regular fa-user"></i>Odbiorcy</li>
-            <li><i class="fa-solid fa-box"></i>Przesyłka</li>
+            <li><i class="fa-solid fa-user"></i><a href="nadawcy.php">Nadawcy</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="odbiorcy.php">Odbiorcy</a></li>
+            <li><i class="fa-solid fa-box"></i><a href="przesylka.php">Przesyłka</a></li>
         </ul>
         </div>
     </div>
