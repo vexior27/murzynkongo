@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    font-family: 'Poppins',sans-serif;
+}
+html 
+{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+ 
+ body 
+ {
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.panel
+{
+    width: 450px;
+    height: 550px;
+    background-color: #202020;
+    z-index: 2;
+    border-radius: 22px;
+}
+
+.panel-back
+{
+    width: 465px;
+    height: 565px;
+    border-radius: 22px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.panel-back::before
+{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 300px;
+  background: rgb(245,109,33);
+  background: linear-gradient(0deg, rgba(245,109,33,1) 35%, rgba(245,164,33,1) 87%);
+  transform: translate(-50%, -50%);
+  animation: 6s infinite border-spin linear;
+  transform-origin: 0px 0px;
+}
+
+@keyframes border-spin
+{
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+
+.Reg-form
+{
+    text-align: center;
+}
+
+.Reg-form h2
+{
+    color: white;
+    margin: 50px 0px 70px 0px;
+    font-size: 30px;
+}
+
+.Reg-form input[type='text']
+{
+    width: 300px;
+    height: 35px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 100ms linear 0s; 
+    border: none;
+}
+
+.Reg-form input[type='text']:focus-visible::placeholder
+{
+   opacity: 0;
+}
+
+.Reg-form input[type='text']:focus-visible
+{
+    outline: #f56d21 2px solid;
+    outline-offset: 0px;
+}
+
+.Subbut
+{
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #f56d21;
+    color: white;
+    font-size: 18px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+}
+
+.Subbut::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    min-height:46px ;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+  }
+  
+  .Subbut:hover
+  {
+    transform: scale(110%);
+  }
+
+  .Subbut:hover::before {
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .Subbut:hover p{
+    color: #f56d21;
+  }
+  
+  .Subbut p {
+    margin: 0px;
+    z-index: 3;
+    position: relative;
+  }
+
+  .ChangePanel
+  {
+    margin-top: 40px;
+    font-size: 25px;
+  }
+
+  .ChangeBut
+  {
+    width: 150px;
+    background-color: black;
+    border-radius: 25px;
+    border: none;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .ChangeBut p
+  {
+    color: white;
+    display: inline-block;
+    margin: 0px;
+  }
+
+  .fa-arrow-right
+  {
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+  }
+
