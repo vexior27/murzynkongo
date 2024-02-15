@@ -14,11 +14,13 @@
                 <img src="" alt="">
             </div>
             <div id="user-name">
-                <p><?php 
+                <p>
+                <?php 
                    session_start();
                    $ul = $_SESSION['userLogin'];
                    echo $ul;
-                ?></p>
+                ?>
+                </p>
             </div>
             <button id="logout">Wyloguj</button>
         </div>

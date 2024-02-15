@@ -1,10 +1,13 @@
 <?php
+
+session_start();
+
 define("HOST", "localhost");
 define("PASS", "");
 define("USER", "root");
 
-if(isset($_POST['Uname']) && isset($_POST['Upass']) && isset($_POST['UpassR'])) {
-    $log = $_POST['Uname'];
+if(isset($_POST['userLogin']) && isset($_POST['Upass']) && isset($_POST['UpassR'])) {
+    $log = $_POST['userLogin'];
     $haslo = $_POST['Upass'];
     $haslo_repeat = $_POST['UpassR'];
 
@@ -50,7 +53,7 @@ if(isset($_POST['Uname']) && isset($_POST['Upass']) && isset($_POST['UpassR'])) 
                 // Check if the query was successful
                 if(mysqli_affected_rows($conn) > 0) {
                     echo "User registered successfully!";
-                    header('location: dashboard.php');
+                    header('location: log.php');
                 } else {
                     echo "Error: " . mysqli_error($conn);
                 }
@@ -76,12 +79,17 @@ if(isset($_POST['Uname']) && isset($_POST['Upass']) && isset($_POST['UpassR'])) 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+<style>
+     body {
+      background-image: url("bg2.png");
+   }
+</style>
 <body>
     <div class="panel-back">
             <div class="panel">
                 <form action="reg.php" class="Reg-form" method="POST">
                     <h2>Registration</h2>
-                    <input name="Uname" type="text" placeholder="Username">
+                    <input name="userLogin" type="text" placeholder="Username">
                     <input name="Upass" type="text" placeholder="Password">
                     <input name="UpassR" type="text" placeholder="Reapet Password">
                     <button class="Subbut" type="submit"><p>Register</p></button>
@@ -90,7 +98,7 @@ if(isset($_POST['Uname']) && isset($_POST['Upass']) && isset($_POST['UpassR'])) 
     </div>
 
     <div class="ChangePanel">
-        <a class="ChangeBut" href="http://localhost/murzynkongo-master/log.php">
+        <a class="ChangeBut" href="log.php">
             <i class="fa-solid fa-arrow-right"></i>
             <p>Logowanie</p>
         </a>

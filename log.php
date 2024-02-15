@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+<style>
+     body {
+      background-image: url("bg2.png");
+   }
+</style>
 <body>
     <div class="panel-back">
         <div class="panel">
             <form action="log.php" class="Reg-form" method="POST">
                 <h2>Login</h2>
-                <input type="text" name="Uname" placeholder="Username">
+                <input type="text" name="userLogin" placeholder="Username">
                 <input type="text" name="Upass" placeholder="Password">
                 <button class="Subbut" type="submit"><p>Login</p></button>
             </form>
@@ -20,7 +25,7 @@
     </div>
 
     <div class="ChangePanel">
-        <a class="ChangeBut" href="http://localhost/murzynkongo-master/reg.php">
+        <a class="ChangeBut" href="reg.php">
             <i class="fa-solid fa-arrow-right"></i>
             <p>Rejestracja</p>
         </a>
@@ -29,12 +34,14 @@
 </html>
 
 <?php
+
+session_start();
 define("HOST", "localhost");
 define("PASS", "");
 define("USER", "root");
 
-if(isset($_POST['Uname']) && isset($_POST['Upass'])) {
-    $log = $_POST['Uname'];
+if(isset($_POST['userLogin']) && isset($_POST['Upass'])) {
+    $log = $_POST['userLogin'];
     $haslo = $_POST['Upass'];
 
     if (empty($log) || empty($haslo)) {
@@ -66,6 +73,8 @@ if(isset($_POST['Uname']) && isset($_POST['Upass'])) {
 
             if (mysqli_stmt_fetch($kwerenda)) {
                 if (password_verify($haslo, $stored_password)) {
+                    session_start();
+                    $_SESSION['userLogin'] = $ul;
                     echo "Login successful!";
                     header('location: dashboard.php');
 

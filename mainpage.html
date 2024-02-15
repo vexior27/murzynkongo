@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+   }
+
+   body {
+      background-image: url("bg2.png");
+   }
+
+   header {
+      background-color: #202020;
+      width: 100%;
+      height: 10vh;
+      gap: 10px;
+   }
+
+   header a {
+      color: white;
+      font-family: 'Poppins';
+      text-decoration: none;
+      padding: 10px 25px;
+      background-color: #f56d21;
+      border-radius: 10px;
+      font-weight: 500;
+      float: right;
+   }
+
+   header img {
+      float: left;
+   }
+
+   main {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   main p {
+      color: white;
+      font-family: 'Poppins';
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+   }
+
+   main p span {
+      font-size: 2.2rem;
+   }
+
+   main p .exprss {
+      color: #f56d21;
+   }
+
+   main p a {
+      color: #f56d21;
+      text-decoration: none;
+   }
+
+   footer {
+      background-color: #202020;
+      width: 100%;
+      height: 10vh;
+      gap: 10px;
+      color: rgb(116, 116, 116);
+      font-family: 'Poppins';
+      font-size: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+   }
+</style>
+<body>
+   <header>
+      <img src="logo.png" alt="">
+      <a href="log.php">Login</a>
+      <a href="reg.php">Register</a>
+   </header>
+   <main>
+      <p>Witamy na naszej stronie!<br>
+         <span>Przyspiesz swoje dostawy z <b><span class="exprss">Express</span>Way</span></b><br>
+         <a href="reg.php">Dołącz już dziś!</a>
+      </p>
+   </main>
+   <footer>
+      <img src="logo.png" alt="" style="width: 150px;">
+      <p>© 2023-2024 ExpressWay. All rigths reserved.</p>
+   </footer>
+</body>
+</html>
