@@ -20,26 +20,31 @@
    }
 
    header {
-      background-color: #202020;
-      width: 100%;
-      height: 10vh;
-      gap: 10px;
-   }
+    background-color: #202020;
+    width: 100%;
+    height: 10vh;
+    gap: 10px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
 
-   header a {
-      color: white;
-      font-family: 'Poppins';
-      text-decoration: none;
-      padding: 10px 25px;
-      background-color: #f56d21;
-      border-radius: 10px;
-      font-weight: 500;
-      float: right;
-   }
+header div a {
+    color: white;
+    font-family: 'Poppins';
+    text-decoration: none;
+    background-color: #f56d21;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 125px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-left: 20px;
+    display: inline-block;
+}
 
-   header img {
-      float: left;
-   }
+
 
    main {
       height: 80vh;
@@ -87,8 +92,10 @@
 <body>
    <header>
       <img src="logo.png" alt="">
+      <div>
       <a href="log.php">Login</a>
       <a href="reg.php">Register</a>
+       </div>
    </header>
    <main>
       <p>Witamy na naszej stronie!<br>
