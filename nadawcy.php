@@ -23,15 +23,15 @@
                    session_abort();
                 ?></p>
             </div>
-            <button id="logout">Wyloguj</button>
+            <button id="logout"><a href="mainpage.html">Wyloguj</a></button>
         </div>
         <div id="menu">
         <ul>
             <li><i class="fa-solid fa-house"></i><a href="dashboard.php">Strona główna</a></li>
             <li><i class="fa-solid fa-users"></i><a href="oddzialy.php">Dane oddzialu</a></li>
-            <li><i class="fa-solid fa-truck-fast"></i>Kurierzy</li>
-            <li><i class="fa-solid fa-user"></i><a href="nadawcy.php">Nadawcy</a></li>
-            <li class="active"><i class="fa-regular fa-user"></i><a href="odbiorcy.php">Odbiorcy</a></li>
+            <li><i class="fa-solid fa-truck-fast"></i><a href="kurierzy.php">Kurierzy</a></li>
+            <li class="active"><i class="fa-solid fa-user"></i><a href="nadawcy.php">Nadawcy</a></li>
+            <li><i class="fa-regular fa-user"></i><a href="odbiorcy.php">Odbiorcy</a></li>
             <li><i class="fa-solid fa-box"></i><a href="przesylka.php">Przesyłka</a></li>
         </ul>
         </div>

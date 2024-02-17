@@ -28,7 +28,7 @@
                    session_abort();
                 ?></p>
             </div>
-            <button id="logout">Wyloguj</button>
+            <button id="logout"><a href="mainpage.html">Wyloguj</a></button>
         </div>
         <div id="menu">
         <ul>
